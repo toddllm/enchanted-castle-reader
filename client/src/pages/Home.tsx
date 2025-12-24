@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BookLayout } from '@/components/BookLayout';
 import { BookPage } from '@/components/BookPage';
+import { ComicPage } from '@/components/ComicPage';
 import { BookControls } from '@/components/BookControls';
 import { rawBookContent } from '@/lib/book-content';
 import { parseBookContent, Chapter } from '@/lib/book-parser';
@@ -106,12 +107,21 @@ export default function Home() {
 
             <div className="relative z-10 pt-8">
               {activePage && (
-                <BookPage 
-                  page={activePage} 
-                  isActive={true} 
-                  pageNumber={currentPage} 
-                  totalPages={totalPages} 
-                />
+                activePage.type === 'comic' ? (
+                  <ComicPage
+                    imageSrc={activePage.imageSrc!}
+                    caption={activePage.caption}
+                    dialogue={activePage.dialogue}
+                    isActive={true}
+                  />
+                ) : (
+                  <BookPage 
+                    page={activePage} 
+                    isActive={true} 
+                    pageNumber={currentPage} 
+                    totalPages={totalPages} 
+                  />
+                )
               )}
             </div>
 
