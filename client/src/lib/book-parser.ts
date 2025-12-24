@@ -67,36 +67,19 @@ export function parseBookContent(text: string): Chapter[] {
       chapter: 'Chapter I',
       type: 'comic',
       imageSrc: '/images/comic-panel-1.png',
-      caption: 'There were three of them—Jerry, Jimmy, and Kathleen. Of course, Jerry\'s name was Gerald, and not Jeremiah, whatever you may think; and Jimmy\'s name was James; and Kathleen was never called by her name at all, but Cathy, or Catty, or Puss Cat.',
-    },
-    {
-      id: 0,
-      content: '',
-      chapter: 'Chapter I',
-      type: 'comic',
-      imageSrc: '/images/comic-panel-2.png',
-      caption: 'When tea was over, Kathleen unpacked and arranged the boys\' clothes.',
-      dialogue: [
-        '"We ought to have some sort of play to keep us going through the holidays," said Kathleen.',
-        '"Suppose we write a book."'
-      ]
-    },
-    {
-      id: 0,
-      content: '',
-      chapter: 'Chapter I',
-      type: 'comic',
-      imageSrc: '/images/comic-panel-3.png',
-      dialogue: [
-        '"You couldn\'t," said Jimmy.',
-        '"I didn\'t mean me, of course," said Kathleen, a little injured; "I meant us."',
-        '"Too much fag," said Gerald briefly.'
-      ]
+      // No caption or dialogue needed as the speech bubbles are in the image now
+      caption: '',
+      dialogue: []
     }
   ];
 
   // Insert comic pages at the beginning for demonstration
-  pages.unshift(...comicPages);
+  // We'll place it after the first page of text to introduce the characters first
+  if (pages.length > 0) {
+    pages.splice(1, 0, ...comicPages);
+  } else {
+    pages.push(...comicPages);
+  }
 
   // Re-index pages
   pages.forEach((page, index) => {
