@@ -15,9 +15,15 @@ When they had gone to pack their boxes Kathleen made all the rooms as pretty as 
 
 "If we wrote a book," Kathleen persisted, "about what the insides of schools really are like, people would read it and say how clever we were."
 
+<comic-panel src="/images/comic-panel-1.png" alt="Gerald proposing the bandit game to skeptical Jimmy and Kathleen">
 "More likely expel us," said Gerald. "No; we'll have an out-of-doors game—bandits, or something like that. It wouldn't be bad if we could get a cave and keep stores in it, and have our meals there."
 
+"I dare say," said Jimmy. "And be caught by the police."
+</comic-panel>
+
+<comic-panel src="/images/comic-panel-2.png" alt="Jimmy's sarcastic response about caves and Mademoiselle">
 "There aren't any caves," said Jimmy, who was fond of contradicting every one. "And, besides, your precious Mamselle won't let us go out alone, as likely as not."
+</comic-panel>
 
 "Oh, we'll see about that," said Gerald. "I'll go and talk to her like a father."
 
@@ -29,9 +35,11 @@ It was a very sleek boy, brown and thin and interesting-looking, that knocked at
 
 "Entrez!" said Mademoiselle, in a sharp, sudden voice, and Gerald entered.
 
+<comic-panel src="/images/comic-panel-mademoiselle.png" alt="Gerald charming Mademoiselle to ask for permission to go out">
 "Eh bien?" she said impatiently.
 
 "I've come to ask," said Gerald, "if we may go out for a walk."
+</comic-panel>
 
 "How can you go out?" said Mademoiselle, ruffling the pages of her book. "I am not arranged to take you out, and I cannot permit that you go alone. The world is full of wicked people who steal children."
 
@@ -81,7 +89,9 @@ They went to the end of the garden. The wall there was lower than at the sides, 
 
 "What is it?" asked the others.
 
+<comic-panel src="/images/comic-panel-3.png" alt="Gerald discovering the cave entrance from the top of the wall">
 "It's a cave," said Gerald. "A real cave. It looks like the entrance to an enchanted castle."
+</comic-panel>
 
 "Let me look," said Jimmy, scrambling up.
 
@@ -111,7 +121,9 @@ He stooped down and crept into the cave. The others followed. Inside it was dark
 
 He lighted the candle, and they saw that they were in a long, low passage. The walls were made of stone, and the roof was arched.
 
+<comic-panel src="/images/comic-panel-secret-passage.png" alt="The children exploring the secret passage with a candle">
 "It's a secret passage," said Kathleen. "I knew it was an enchanted castle."
+</comic-panel>
 
 They walked along the passage for what seemed a long time. It went down and down, and then it began to go up again. At last they saw a glimmer of light ahead.
 
@@ -119,7 +131,9 @@ They walked along the passage for what seemed a long time. It went down and down
 
 They hurried on, and came out into the dazzling sunlight. They were in a beautiful garden—much more beautiful than the one they had left. There were fountains playing, and peacocks walking on the lawns, and statues standing among the flowers. And in the middle of the garden stood a great white castle, with towers and turrets and flags flying from the battlements.
 
+<comic-panel src="/images/comic-panel-castle-view.png" alt="The children discovering the enchanted castle">
 "It is an enchanted castle," said Gerald. "I told you so."
+</comic-panel>
 
 They stood and looked at it in silence. It was so beautiful that it took their breath away.
 
