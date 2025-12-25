@@ -36,11 +36,31 @@ export function BookPage({ page, isActive, pageNumber, totalPages }: BookPagePro
 
         {/* Content */}
         <div className="prose prose-lg prose-stone max-w-none font-serif leading-relaxed text-foreground">
-          {page.content.split('\n\n').map((paragraph, index) => (
-            <p key={index} className="mb-6 first-letter:text-5xl first-letter:font-display first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:mt-[-10px]">
-              {paragraph}
-            </p>
-          ))}
+          {page.type === 'comic' ? (
+            <div className="flex flex-col items-center my-8">
+              <div className="relative p-2 bg-white shadow-lg rotate-1 transform transition-transform hover:rotate-0 duration-500 border-4 border-stone-200">
+                <img 
+                  src={page.imageSrc} 
+                  alt={page.caption || "Comic panel"} 
+                  className="w-full h-auto max-h-[60vh] object-contain rounded-sm"
+                />
+              </div>
+              {page.content && (
+                <p className="mt-6 text-lg italic text-center text-stone-600 font-medium max-w-lg">
+                  {page.content}
+                </p>
+              )}
+            </div>
+          ) : (
+            page.content.split('\n\n').map((paragraph, index) => (
+              <p key={index} className={cn(
+                "mb-6",
+                index === 0 && pageNumber === 1 ? "first-letter:text-5xl first-letter:font-display first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:mt-[-10px]" : ""
+              )}>
+                {paragraph}
+              </p>
+            ))
+          )}
         </div>
 
         {/* Page Footer Decoration */}
