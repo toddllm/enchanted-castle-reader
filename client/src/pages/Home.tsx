@@ -3,6 +3,8 @@ import { BookLayout } from '@/components/BookLayout';
 import { BookPage } from '@/components/BookPage';
 import { ComicPage } from '@/components/ComicPage';
 import { BookControls } from '@/components/BookControls';
+import { ChapterMenu } from '@/components/ChapterMenu';
+import { Menu } from 'lucide-react';
 import { rawBookContent } from '@/lib/book-content';
 import { parseBookContent, Chapter } from '@/lib/book-parser';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,6 +15,7 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showCover, setShowCover] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const parsedChapters = parseBookContent(rawBookContent);
@@ -58,11 +61,21 @@ export default function Home() {
     setShowCover(false);
   };
 
+  const handleChapterSelect = (pageId: number) => {
+    setCurrentPage(pageId);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   if (chapters.length === 0) return null;
 
-  const currentChapter = chapters[0];
-  const totalPages = currentChapter.pages.length;
-  const activePage = currentChapter.pages.find(p => p.id === currentPage);
+  // Find current chapter based on current page
+  const currentChapter = chapters.find(c => c.pages.some(p => p.id === currentPage)) || chapters[0];
+  
+  // Calculate total pages across all chapters for global progress
+  const allPages = chapters.flatMap(c => c.pages);
+  const totalPages = allPages.length;
+  
+  const activePage = allPages.find(p => p.id === currentPage);
 
   return (
     <BookLayout>
@@ -104,6 +117,26 @@ export default function Home() {
               <img src="/images/hero-bg.png" alt="Background" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
             </div>
+
+            {/* Menu Button */}
+            <div className="fixed top-4 left-4 z-50">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMenuOpen(true)}
+                className="bg-card/80 backdrop-blur-sm shadow-md hover:bg-card rounded-full border border-border/50"
+              >
+                <Menu className="w-6 h-6 text-primary" />
+              </Button>
+            </div>
+
+            <ChapterMenu 
+              isOpen={isMenuOpen}
+              onClose={() => setIsMenuOpen(false)}
+              chapters={chapters}
+              currentChapterId={currentChapter.id}
+              onSelectChapter={handleChapterSelect}
+            />
 
             <div className="relative z-10 pt-8">
               {activePage && (

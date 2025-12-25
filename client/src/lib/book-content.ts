@@ -1,4 +1,5 @@
 export const rawBookContent = `
+CHAPTER I
 There were three of them—Jerry, Jimmy, and Kathleen. Of course, Jerry's name was Gerald, and not Jeremiah, whatever you may think; and Jimmy's name was James; and Kathleen was never called by her name at all, but Cathy, or Catty, or Puss Cat, when her brothers were pleased with her, and Scratch Cat when they were not pleased. And they were at school in a little town in the West of England—the boys at one school, of course, and the girl at another, because the sensible habit of having boys and girls at the same school is not yet as common as I hope it will be some day. They used to see each other on Saturdays and Sundays at the house of a kind maiden lady; but it was one of those houses where it is impossible to play. You know the kind of house, don't you? There is a sort of a something about that kind of house that makes you hardly able even to talk to each other when you are left alone, and playing seems unnatural and affected. So they looked forward to the holidays, when they should all go home and be together all day long, in a house where playing was natural and conversation possible, and where the Hampshire forests and fields were full of interesting things to do and see. Their Cousin Betty was to be there too, and there were plans. Betty's school broke up before theirs, and so she got to the Hampshire home first, and the moment she got there she began to have measles, so that my three couldn't go home at all. You may imagine their feelings. The thought of seven weeks at Miss Hervey's was not to be borne, and all three wrote home and said so. This astonished their parents very much, because they had always thought it was so nice for the children to have dear Miss Hervey's to go to. However, they were "jolly decent about it," as Jerry said, and after a lot of letters and telegrams, it was arranged that the boys should go and stay at Kathleen's school, where there were now no girls left and no mistresses except the French one.
 
 "It'll be better than being at Miss Hervey's," said Kathleen, when the boys came round to ask Mademoiselle when it would be convenient for them to come; "and, besides, our school's not half so ugly as yours. We do have tablecloths on the tables and curtains at the windows, and yours is all deal boards, and desks, and inkiness."
@@ -216,4 +217,103 @@ She took the ring and looked at it.
 They all spoke at once. And then—
 
 But what happened then is another story. This is only the beginning of the adventures of the three children in the Enchanted Castle.
+
+CHAPTER II
+The Princess went first, and Kathleen carried her shining train; then came Jimmy, and Gerald came last. They were all quite sure that they had walked right into the middle of a fairy tale, and they were very ready to play the parts of the three heroes.
+
+"But," said Gerald, "I don't see how we can play the parts if we don't know what the story is."
+
+"We shall find out as we go along," said the Princess. "That's the best of this game. You never know what's going to happen next."
+
+They went through the great hall and up the broad staircase. The Princess led the way to a room that was quite different from the others. It was not dusty or neglected. There were fresh flowers in the vases, and a fire burned on the hearth, for though it was summer the room was cool.
+
+<comic-panel src="/images/comic-panel-princess-bower.png" alt="The Princess in her bower telling the story to the children">
+"This is my bower," said the Princess. "Here we can talk."
+
+She sat down on a low chair, and the others sat on the floor.
+</comic-panel>
+
+"Now," she said, "I'll tell you the story. I am the Princess of this castle. I am kept here by a wicked enchanter. He is invisible to every one but me. He comes every day to see that I am safe."
+
+"What does he do?" asked Jimmy.
+
+"He just looks at me," said the Princess, "and then he goes away. But I know he is there. Sometimes I feel his cold breath on my cheek."
+
+"How horrid!" said Kathleen.
+
+"Yes," said the Princess. "But I have a friend who is a good fairy. She gave me this ring. She said that if I ever found three children who were brave and true, I was to give them the ring, and they would save me."
+
+"We are brave and true," said Gerald. "At least, I hope so."
+
+<comic-panel src="/images/comic-panel-magic-ring-explanation.png" alt="The Princess showing the magic ring to the children">
+"Then," said the Princess, "you must take the ring and wear it. But you must be careful. It is a magic ring, and it has great power. If you use it wrongly, it may bring you bad luck."
+
+"We'll be careful," said Gerald. "But what does it do?"
+</comic-panel>
+
+"It grants wishes," said the Princess. "But only one wish to each person. And you must wish for something unselfish."
+
+"That's easy," said Kathleen. "I wish you were free from the enchanter."
+
+The Princess smiled. "That is a good wish," she said. "But you must wait until the right time. The enchanter is very powerful. We must catch him when he is off his guard."
+
+"When will that be?" asked Jimmy.
+
+"I don't know," said the Princess. "But we must watch and wait."
+
+They talked for a long time, planning how they would defeat the enchanter. The Princess told them many things about the castle—about the secret passages, and the hidden treasures, and the ghosts that walked at night.
+
+"Ghosts!" said Jimmy. "I don't believe in ghosts."
+
+"You will when you see them," said the Princess. "They are very real here."
+
+Suddenly a bell rang somewhere in the castle.
+
+"That is the dinner bell," said the Princess. "You must go now. If the enchanter finds you here, he will be very angry."
+
+"But we haven't saved you yet," said Gerald.
+
+"You will," said the Princess. "Come back to-morrow. I will be waiting for you."
+
+She led them down a secret staircase that ended in the garde"Good-bye," said the Princess. "Remember the ring."
+
+"We will," said the others.
+
+<comic-panel src="/images/comic-panel-garden-return.png" alt="The children walking back through the wood, thinking about the adventure">
+They walked back through the wood in silence. They were all thinking about the Princess and the magic ring.
+</comic-panel>'s a splendid game," said Kathleen. "I almost believe it's true."
+
+"Of course it's true," said Gerald. "Look at the ring."
+
+He held up his hand. The ring was still there, shining in the sunlight.
+
+"I wonder what we shall wish for," said Jimmy.
+
+"We must wait," said Gerald. "The Princess said so."
+
+When they got back to the school, Mademoiselle was looking for them.
+
+"Where have you been?" she asked. "You are late for tea."
+
+"We've been in the garden," said Gerald. "We fell asleep."
+
+"You must not sleep in the garden," said Mademoiselle. "It is damp. You will catch cold."
+
+"We are quite well," said Kathleen. "And we are very hungry."
+
+They had a good tea, and then they went up to the dormitory to talk about their adventure.
+
+"I think the Princess is Mabel," said Kathleen. "You know, the girl who lives at the lodge."
+
+"She didn't look like Mabel," said Jimmy. "She looked like a real princess."
+
+"That's the magic," said Gerald. "It makes everything look different."
+
+"I wonder if the ring really works," said Jimmy. "I've a good mind to try it."
+
+"No, don't," said Gerald. "You might spoil everything. We must do exactly what the Princess said."
+
+So they decided to wait until the next day. But they were very excited, and it was a long time before they could go to sleep.
+
+And that is the end of the second chapter.
 `;
