@@ -171,9 +171,11 @@ They went up the broad staircase, their footsteps echoing in the silence. They w
 
 They went on exploring, but they found no banquet. At last they came to a room at the top of a tower. It was a round room, with windows looking out in all directions. In the middle of the room was a table, and on the table was a ring.
 
+<comic-panel src="/images/comic-panel-ring.png" alt="The children discovering the magic ring in the tower room">
 "Look!" cried Kathleen. "A ring!"
 
 "It's a magic ring," said Gerald. "I bet it is."
+</comic-panel>
 
 He picked it up. It was a heavy gold ring, with a strange design carved on it.
 
