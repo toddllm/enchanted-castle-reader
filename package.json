@@ -13,6 +13,7 @@
     "book:extract": "tsx scripts/extract-gutenberg.ts",
     "book:content": "tsx scripts/update-book-content.ts",
     "book:build": "tsx scripts/build-book-json.ts",
+    "build:pages": "vite build",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
