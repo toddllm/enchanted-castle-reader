@@ -12,7 +12,11 @@
     "format": "prettier --write .",
     "book:extract": "tsx scripts/extract-gutenberg.ts",
     "book:content": "tsx scripts/update-book-content.ts",
-    "book:build": "tsx scripts/build-book-json.ts"
+    "book:build": "tsx scripts/build-book-json.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
