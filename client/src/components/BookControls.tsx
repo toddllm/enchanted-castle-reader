@@ -27,17 +27,19 @@ export function BookControls({
         size="icon" 
         onClick={onPrev} 
         disabled={currentPage === 1}
+        aria-label="Previous page"
+        data-testid="nav-prev"
         className="rounded-full hover:bg-primary/10 hover:text-primary transition-colors"
       >
         <ChevronLeft className="h-6 w-6" />
       </Button>
       
-      <div className="flex items-center gap-2 px-2">
-        <span className="font-display text-lg font-bold text-primary min-w-[3ch] text-center">
+      <div className="flex items-center gap-2 px-2" data-testid="page-indicator">
+        <span className="font-display text-lg font-bold text-primary min-w-[3ch] text-center" data-testid="page-current">
           {currentPage}
         </span>
         <span className="text-muted-foreground font-serif italic">/</span>
-        <span className="text-muted-foreground font-serif italic min-w-[3ch] text-center">
+        <span className="text-muted-foreground font-serif italic min-w-[3ch] text-center" data-testid="page-total">
           {totalPages}
         </span>
       </div>
@@ -47,6 +49,8 @@ export function BookControls({
         size="icon" 
         onClick={onNext} 
         disabled={currentPage === totalPages}
+        aria-label="Next page"
+        data-testid="nav-next"
         className="rounded-full hover:bg-primary/10 hover:text-primary transition-colors"
       >
         <ChevronRight className="h-6 w-6" />
@@ -58,6 +62,8 @@ export function BookControls({
         variant="ghost" 
         size="icon" 
         onClick={onBookmark}
+        aria-label={isBookmarked ? "Remove bookmark" : "Add bookmark"}
+        data-testid="bookmark-toggle"
         className={cn(
           "rounded-full transition-all duration-300",
           isBookmarked 

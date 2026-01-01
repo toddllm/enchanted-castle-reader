@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Lightbox } from '@/components/Lightbox';
-import { ZoomIn } from 'lucide-react';
+import { ImageOff, ZoomIn } from 'lucide-react';
 
 interface ComicPageProps {
   imageSrc: string;
@@ -13,6 +13,16 @@ interface ComicPageProps {
 
 export function ComicPage({ imageSrc, caption, dialogue, isActive }: ComicPageProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [hasError, setHasError] = useState(!imageSrc);
+
+  useEffect(() => {
+    setHasError(!imageSrc);
+  }, [imageSrc]);
+
+  const handleOpenLightbox = () => {
+    if (hasError) return;
+    setIsLightboxOpen(true);
+  };
 
   if (!isActive) return null;
 
@@ -28,28 +38,46 @@ export function ComicPage({ imageSrc, caption, dialogue, isActive }: ComicPagePr
         <div className="relative bg-card p-3 md:p-6 shadow-2xl rounded-sm border-4 border-primary/20 w-full">
           {/* Comic Panel Image */}
           <div 
-            className="relative overflow-hidden rounded-sm border-2 border-primary/80 group cursor-zoom-in"
-            onClick={() => setIsLightboxOpen(true)}
+            className={cn(
+              "relative overflow-hidden rounded-sm border-2 border-primary/80 group",
+              hasError ? "cursor-default" : "cursor-zoom-in"
+            )}
+            onClick={handleOpenLightbox}
+            data-testid="comic-panel"
           >
-            <img 
-              src={imageSrc} 
-              alt={caption || "Comic Panel"} 
-              className="w-full h-auto object-contain max-h-[65vh] bg-stone-100"
-            />
+            {hasError ? (
+              <div
+                className="flex flex-col items-center justify-center gap-3 bg-stone-100 text-muted-foreground min-h-[40vh] px-6 text-center"
+                data-testid="comic-fallback"
+              >
+                <ImageOff className="w-10 h-10" />
+                <p className="font-serif text-base">Illustration unavailable.</p>
+              </div>
+            ) : (
+              <img 
+                src={imageSrc} 
+                alt={caption || "Comic Panel"} 
+                className="w-full h-auto object-contain max-h-[65vh] bg-stone-100"
+                onError={() => setHasError(true)}
+                data-testid="comic-image"
+              />
+            )}
             
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-              <div className="bg-black/50 text-white px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm">
-                <ZoomIn className="w-5 h-5" />
-                <span className="font-medium">Zoom</span>
+            {!hasError && (
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                <div className="bg-black/50 text-white px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm">
+                  <ZoomIn className="w-5 h-5" />
+                  <span className="font-medium">Zoom</span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Caption / Dialogue Area */}
           {(caption || (dialogue && dialogue.length > 0)) && (
             <div className="mt-6 font-serif text-lg md:text-xl leading-relaxed text-center max-w-2xl mx-auto">
-              {caption && (
+              {caption && (!dialogue || dialogue.length === 0) && (
                 <p className="text-muted-foreground italic mb-4">{caption}</p>
               )}
               {dialogue && dialogue.map((line, index) => (
@@ -63,7 +91,7 @@ export function ComicPage({ imageSrc, caption, dialogue, isActive }: ComicPagePr
       </motion.div>
 
       <Lightbox 
-        isOpen={isLightboxOpen} 
+        isOpen={isLightboxOpen && !hasError} 
         onClose={() => setIsLightboxOpen(false)} 
         imageSrc={imageSrc} 
         alt={caption || "Comic Panel"} 

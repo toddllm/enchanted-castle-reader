@@ -35,7 +35,7 @@ export function BookPage({ page, isActive, pageNumber, totalPages }: BookPagePro
 
           {/* Page Header */}
           <div className="flex justify-between items-center mb-8 text-muted-foreground font-serif italic text-sm">
-            <span>{page.chapter}</span>
+            <span data-testid="page-chapter">{page.chapter}</span>
             <span>Page {pageNumber} of {totalPages}</span>
           </div>
 

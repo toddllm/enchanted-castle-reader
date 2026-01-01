@@ -1,0 +1,86 @@
+{
+    "chapters": [
+        {
+            "chapterId": 1,
+            "title": "Chapter I",
+            "scenes": [
+                {
+                    "id": "ch01_01_bandit_proposal",
+                    "description": "Gerald proposing the bandit game to skeptical Jimmy and Kathleen",
+                    "placement": "After Gerald mentions writing a book",
+                    "path": "/images/ch01_01_bandit_proposal.png",
+                    "originalFile": "comic-panel-1.png"
+                },
+                {
+                    "id": "ch01_02_jimmy_sarcasm",
+                    "description": "Jimmy's sarcastic response about caves and Mademoiselle",
+                    "placement": "After Jimmy says there aren't any caves",
+                    "path": "/images/ch01_02_jimmy_sarcasm.png",
+                    "originalFile": "comic-panel-2.png"
+                },
+                {
+                    "id": "ch01_03_charming_mademoiselle",
+                    "description": "Gerald charming Mademoiselle to ask for permission to go out",
+                    "placement": "When Gerald enters Mademoiselle's room",
+                    "path": "/images/ch01_03_charming_mademoiselle.png",
+                    "originalFile": "comic-panel-mademoiselle.png"
+                },
+                {
+                    "id": "ch01_04_cave_discovery",
+                    "description": "Gerald discovering the cave entrance from the top of the wall",
+                    "placement": "When Gerald climbs the tree",
+                    "path": "/images/ch01_04_cave_discovery.png",
+                    "originalFile": "comic-panel-3.png"
+                },
+                {
+                    "id": "ch01_05_secret_passage",
+                    "description": "The children exploring the secret passage with a candle",
+                    "placement": "Inside the cave",
+                    "path": "/images/ch01_05_secret_passage.png",
+                    "originalFile": "comic-panel-secret-passage.png"
+                },
+                {
+                    "id": "ch01_06_castle_discovery",
+                    "description": "The children discovering the enchanted castle",
+                    "placement": "When they exit the passage",
+                    "path": "/images/ch01_06_castle_discovery.png",
+                    "originalFile": "comic-panel-castle-view.png"
+                },
+                {
+                    "id": "ch01_07_finding_ring",
+                    "description": "The children discovering the magic ring in the tower room",
+                    "placement": "In the tower room",
+                    "path": "/images/ch01_07_finding_ring.png",
+                    "originalFile": "comic-panel-ring.png"
+                }
+            ]
+        },
+        {
+            "chapterId": 2,
+            "title": "Chapter II",
+            "scenes": [
+                {
+                    "id": "ch02_01_princess_bower",
+                    "description": "The Princess in her bower telling the story to the children",
+                    "placement": "In the bower",
+                    "path": "/images/ch02_01_princess_bower.png",
+                    "originalFile": "comic-panel-princess-bower.png"
+                },
+                {
+                    "id": "ch02_02_ring_explanation",
+                    "description": "The Princess showing the magic ring to the children",
+                    "placement": "While explaining the ring power",
+                    "path": "/images/ch02_02_ring_explanation.png",
+                    "originalFile": "comic-panel-magic-ring-explanation.png"
+                },
+                {
+                    "id": "ch02_03_post_adventure_reflection",
+                    "description": "The children walking back through the wood, thinking about the adventure",
+                    "placement": "Walking back",
+                    "path": "/images/ch02_03_post_adventure_reflection.png",
+                    "originalFile": "comic-panel-garden-return.png"
+                }
+            ]
+        }
+    ]
+}

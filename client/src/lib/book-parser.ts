@@ -4,6 +4,7 @@ export interface BookPage {
   chapter: string;
   type: 'text' | 'comic';
   imageSrc?: string;
+  illustrationId?: string;
   caption?: string;
   dialogue?: string[];
 }
@@ -46,13 +47,18 @@ export function parseBookContent(text: string): Chapter[] {
     for (const part of parts) {
       if (part.startsWith('<comic-panel')) {
         // Handle comic panel
+        const idMatch = part.match(/id="([^"]*)"/);
         const srcMatch = part.match(/src="([^"]*)"/);
         const altMatch = part.match(/alt="([^"]*)"/);
         const contentMatch = part.match(/>([\s\S]*?)<\/comic-panel>/);
         
-        const src = srcMatch ? srcMatch[1] : '';
+        const src = srcMatch ? srcMatch[1] : undefined;
         const alt = altMatch ? altMatch[1] : '';
         const content = contentMatch ? contentMatch[1].trim() : '';
+        const dialogue = content
+          .split(/\n+/)
+          .map(line => line.trim())
+          .filter(Boolean);
         
         pages.push({
           id: globalPageIndex++,
@@ -60,7 +66,9 @@ export function parseBookContent(text: string): Chapter[] {
           chapter: chapterTitle,
           type: 'comic',
           imageSrc: src,
-          caption: alt
+          illustrationId: idMatch ? idMatch[1] : undefined,
+          caption: alt,
+          dialogue: dialogue.length > 0 ? dialogue : undefined
         });
       } else {
         // Handle regular text
@@ -108,17 +116,25 @@ export function parseBookContent(text: string): Chapter[] {
     
     for (const part of parts) {
       if (part.startsWith('<comic-panel')) {
+        const idMatch = part.match(/id="([^"]*)"/);
         const srcMatch = part.match(/src="([^"]*)"/);
         const altMatch = part.match(/alt="([^"]*)"/);
         const contentMatch = part.match(/>([\s\S]*?)<\/comic-panel>/);
+        const content = contentMatch ? contentMatch[1].trim() : '';
+        const dialogue = content
+          .split(/\n+/)
+          .map(line => line.trim())
+          .filter(Boolean);
         
         pages.push({
           id: globalPageIndex++,
-          content: contentMatch ? contentMatch[1].trim() : '',
+          content: content,
           chapter: 'Chapter I',
           type: 'comic',
-          imageSrc: srcMatch ? srcMatch[1] : '',
-          caption: altMatch ? altMatch[1] : ''
+          imageSrc: srcMatch ? srcMatch[1] : undefined,
+          illustrationId: idMatch ? idMatch[1] : undefined,
+          caption: altMatch ? altMatch[1] : '',
+          dialogue: dialogue.length > 0 ? dialogue : undefined
         });
       } else {
         const paragraphs = part.split('\n\n').filter(p => p.trim().length > 0);

@@ -16,13 +16,13 @@ When they had gone to pack their boxes Kathleen made all the rooms as pretty as 
 
 "If we wrote a book," Kathleen persisted, "about what the insides of schools really are like, people would read it and say how clever we were."
 
-<comic-panel src="/images/comic-panel-1.png" alt="Gerald proposing the bandit game to skeptical Jimmy and Kathleen">
+<comic-panel id="ch01_01_bandit_proposal">
 "More likely expel us," said Gerald. "No; we'll have an out-of-doors game—bandits, or something like that. It wouldn't be bad if we could get a cave and keep stores in it, and have our meals there."
 
 "I dare say," said Jimmy. "And be caught by the police."
 </comic-panel>
 
-<comic-panel src="/images/comic-panel-2.png" alt="Jimmy's sarcastic response about caves and Mademoiselle">
+<comic-panel id="ch01_02_jimmy_sarcasm">
 "There aren't any caves," said Jimmy, who was fond of contradicting every one. "And, besides, your precious Mamselle won't let us go out alone, as likely as not."
 </comic-panel>
 
@@ -36,7 +36,7 @@ It was a very sleek boy, brown and thin and interesting-looking, that knocked at
 
 "Entrez!" said Mademoiselle, in a sharp, sudden voice, and Gerald entered.
 
-<comic-panel src="/images/comic-panel-mademoiselle.png" alt="Gerald charming Mademoiselle to ask for permission to go out">
+<comic-panel id="ch01_03_charming_mademoiselle">
 "Eh bien?" she said impatiently.
 
 "I've come to ask," said Gerald, "if we may go out for a walk."
@@ -90,7 +90,7 @@ They went to the end of the garden. The wall there was lower than at the sides, 
 
 "What is it?" asked the others.
 
-<comic-panel src="/images/comic-panel-3.png" alt="Gerald discovering the cave entrance from the top of the wall">
+<comic-panel id="ch01_04_cave_discovery">
 "It's a cave," said Gerald. "A real cave. It looks like the entrance to an enchanted castle."
 </comic-panel>
 
@@ -122,7 +122,7 @@ He stooped down and crept into the cave. The others followed. Inside it was dark
 
 He lighted the candle, and they saw that they were in a long, low passage. The walls were made of stone, and the roof was arched.
 
-<comic-panel src="/images/comic-panel-secret-passage.png" alt="The children exploring the secret passage with a candle">
+<comic-panel id="ch01_05_secret_passage">
 "It's a secret passage," said Kathleen. "I knew it was an enchanted castle."
 </comic-panel>
 
@@ -132,7 +132,7 @@ They walked along the passage for what seemed a long time. It went down and down
 
 They hurried on, and came out into the dazzling sunlight. They were in a beautiful garden—much more beautiful than the one they had left. There were fountains playing, and peacocks walking on the lawns, and statues standing among the flowers. And in the middle of the garden stood a great white castle, with towers and turrets and flags flying from the battlements.
 
-<comic-panel src="/images/comic-panel-castle-view.png" alt="The children discovering the enchanted castle">
+<comic-panel id="ch01_06_castle_discovery">
 "It is an enchanted castle," said Gerald. "I told you so."
 </comic-panel>
 
@@ -172,7 +172,7 @@ They went up the broad staircase, their footsteps echoing in the silence. They w
 
 They went on exploring, but they found no banquet. At last they came to a room at the top of a tower. It was a round room, with windows looking out in all directions. In the middle of the room was a table, and on the table was a ring.
 
-<comic-panel src="/images/comic-panel-ring.png" alt="The children discovering the magic ring in the tower room">
+<comic-panel id="ch01_07_finding_ring">
 "Look!" cried Kathleen. "A ring!"
 
 "It's a magic ring," said Gerald. "I bet it is."
@@ -227,7 +227,7 @@ The Princess went first, and Kathleen carried her shining train; then came Jimmy
 
 They went through the great hall and up the broad staircase. The Princess led the way to a room that was quite different from the others. It was not dusty or neglected. There were fresh flowers in the vases, and a fire burned on the hearth, for though it was summer the room was cool.
 
-<comic-panel src="/images/comic-panel-princess-bower.png" alt="The Princess in her bower telling the story to the children">
+<comic-panel id="ch02_01_princess_bower">
 "This is my bower," said the Princess. "Here we can talk."
 
 She sat down on a low chair, and the others sat on the floor.
@@ -245,7 +245,7 @@ She sat down on a low chair, and the others sat on the floor.
 
 "We are brave and true," said Gerald. "At least, I hope so."
 
-<comic-panel src="/images/comic-panel-magic-ring-explanation.png" alt="The Princess showing the magic ring to the children">
+<comic-panel id="ch02_02_ring_explanation">
 "Then," said the Princess, "you must take the ring and wear it. But you must be careful. It is a magic ring, and it has great power. If you use it wrongly, it may bring you bad luck."
 
 "We'll be careful," said Gerald. "But what does it do?"
@@ -275,13 +275,17 @@ Suddenly a bell rang somewhere in the castle.
 
 "You will," said the Princess. "Come back to-morrow. I will be waiting for you."
 
-She led them down a secret staircase that ended in the garde"Good-bye," said the Princess. "Remember the ring."
+She led them down a secret staircase that ended in the garden.
+
+"Good-bye," said the Princess. "Remember the ring."
 
 "We will," said the others.
 
-<comic-panel src="/images/comic-panel-garden-return.png" alt="The children walking back through the wood, thinking about the adventure">
+<comic-panel id="ch02_03_post_adventure_reflection">
 They walked back through the wood in silence. They were all thinking about the Princess and the magic ring.
-</comic-panel>'s a splendid game," said Kathleen. "I almost believe it's true."
+</comic-panel>
+
+"It's a splendid game," said Kathleen. "I almost believe it's true."
 
 "Of course it's true," said Gerald. "Look at the ring."
 

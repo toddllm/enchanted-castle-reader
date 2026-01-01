@@ -21,6 +21,7 @@ export function Lightbox({ isOpen, onClose, imageSrc, alt }: LightboxProps) {
           transition={{ duration: 0.3 }}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 md:p-8"
           onClick={onClose}
+          data-testid="lightbox-overlay"
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -35,6 +36,8 @@ export function Lightbox({ isOpen, onClose, imageSrc, alt }: LightboxProps) {
               size="icon"
               className="absolute -top-12 right-0 text-white hover:bg-white/20 rounded-full"
               onClick={onClose}
+              aria-label="Close lightbox"
+              data-testid="lightbox-close"
             >
               <X className="h-8 w-8" />
             </Button>
@@ -43,6 +46,7 @@ export function Lightbox({ isOpen, onClose, imageSrc, alt }: LightboxProps) {
               src={imageSrc}
               alt={alt}
               className="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl border-4 border-white/10"
+              data-testid="lightbox-image"
             />
             
             <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
