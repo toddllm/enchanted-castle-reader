@@ -27,3 +27,9 @@ Example: `ch01_01_bandit_proposal.png`
 - Data is stored in `client/src/data/illustrations.json`.
 - Images are referenced by path in the JSON.
 - The text parser uses `<comic-panel id="scene_id">` tags that map to `illustrations.json` entries by `id`.
+- Scene entries may include an `anchor` string used by scripts to place panels near specific passages.
+
+## Pipeline
+- Source text lives in `content/book.txt` (cleaned Project Gutenberg text).
+- Run `pnpm exec tsx scripts/update-book-content.ts` to inject comic-panel placeholders.
+- Run `pnpm exec tsx scripts/build-book-json.ts` to regenerate `client/src/data/book.json`.

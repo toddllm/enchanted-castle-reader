@@ -325,6 +325,13 @@ export default function Home() {
     setBookmarks(prev => prev.filter(bookmark => bookmark.id !== bookmarkId));
   };
 
+  const handleTitlePage = () => {
+    setShowCover(true);
+    setIsMenuOpen(false);
+    setLocation('/', { replace: false });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   if (chapters.length === 0) return null;
 
   return (
@@ -369,7 +376,7 @@ export default function Home() {
                     event.stopPropagation();
                     handleStartReading();
                   }}
-                  className="font-display text-lg px-8 py-5 shadow-lg border-2 border-accent/50"
+                  className="font-display text-lg px-8 py-5 shadow-lg border-2 border-primary/50 bg-card/90 text-primary hover:bg-card hover:text-primary"
                   data-testid="start-reading"
                 >
                   Start from Beginning
@@ -405,6 +412,7 @@ export default function Home() {
             <ChapterMenu 
               isOpen={isMenuOpen}
               onClose={() => setIsMenuOpen(false)}
+              onTitlePage={handleTitlePage}
               chapters={chapters}
               currentChapterId={currentChapter.id}
               currentPageId={currentPageId}
@@ -415,23 +423,25 @@ export default function Home() {
             />
 
             <div className="relative z-10 pt-8">
-              {activePage && (
-                activePage.type === 'comic' ? (
-                  <ComicPage
-                    imageSrc={activePage.imageSrc ?? ''}
-                    caption={activePage.caption}
-                    dialogue={activePage.dialogue}
-                    isActive={true}
-                  />
-                ) : (
-                  <BookPage 
-                    page={activePage} 
-                    isActive={true} 
-                    pageNumber={currentPageNumber} 
-                    totalPages={totalPages} 
-                  />
-                )
-              )}
+              <div className="w-full h-[70vh] md:h-[74vh] lg:h-[78vh]">
+                {activePage && (
+                  activePage.type === 'comic' ? (
+                    <ComicPage
+                      imageSrc={activePage.imageSrc ?? ''}
+                      caption={activePage.caption}
+                      dialogue={activePage.dialogue}
+                      isActive={true}
+                    />
+                  ) : (
+                    <BookPage 
+                      page={activePage} 
+                      isActive={true} 
+                      pageNumber={currentPageNumber} 
+                      totalPages={totalPages} 
+                    />
+                  )
+                )}
+              </div>
             </div>
 
             <BookControls 

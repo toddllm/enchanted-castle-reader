@@ -33,13 +33,13 @@ export function ComicPage({ imageSrc, caption, dialogue, isActive }: ComicPagePr
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 1.05 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full max-w-4xl mx-auto flex flex-col items-center px-4"
+        className="w-full h-full flex flex-col items-center"
       >
-        <div className="relative bg-card p-3 md:p-6 shadow-2xl rounded-sm border-4 border-primary/20 w-full">
+        <div className="relative bg-card p-3 md:p-6 shadow-2xl rounded-sm border-4 border-primary/20 w-full h-full overflow-hidden flex flex-col">
           {/* Comic Panel Image */}
           <div 
             className={cn(
-              "relative overflow-hidden rounded-sm border-2 border-primary/80 group",
+              "relative flex-1 min-h-0 overflow-hidden rounded-sm border-2 border-primary/80 group flex items-center justify-center",
               hasError ? "cursor-default" : "cursor-zoom-in"
             )}
             onClick={handleOpenLightbox}
@@ -47,7 +47,7 @@ export function ComicPage({ imageSrc, caption, dialogue, isActive }: ComicPagePr
           >
             {hasError ? (
               <div
-                className="flex flex-col items-center justify-center gap-3 bg-stone-100 text-muted-foreground min-h-[40vh] px-6 text-center"
+                className="flex h-full w-full flex-col items-center justify-center gap-3 bg-stone-100 text-muted-foreground px-6 text-center"
                 data-testid="comic-fallback"
               >
                 <ImageOff className="w-10 h-10" />
@@ -57,7 +57,7 @@ export function ComicPage({ imageSrc, caption, dialogue, isActive }: ComicPagePr
               <img 
                 src={imageSrc} 
                 alt={caption || "Comic Panel"} 
-                className="w-full h-auto object-contain max-h-[65vh] bg-stone-100"
+                className="w-full h-full object-contain bg-stone-100"
                 onError={() => setHasError(true)}
                 data-testid="comic-image"
               />

@@ -1,86 +1,366 @@
 {
-    "chapters": [
+  "chapters": [
+    {
+      "chapterId": 1,
+      "title": "Chapter I",
+      "scenes": [
         {
-            "chapterId": 1,
-            "title": "Chapter I",
-            "scenes": [
-                {
-                    "id": "ch01_01_bandit_proposal",
-                    "description": "Gerald proposing the bandit game to skeptical Jimmy and Kathleen",
-                    "placement": "After Gerald mentions writing a book",
-                    "path": "/images/ch01_01_bandit_proposal.png",
-                    "originalFile": "comic-panel-1.png"
-                },
-                {
-                    "id": "ch01_02_jimmy_sarcasm",
-                    "description": "Jimmy's sarcastic response about caves and Mademoiselle",
-                    "placement": "After Jimmy says there aren't any caves",
-                    "path": "/images/ch01_02_jimmy_sarcasm.png",
-                    "originalFile": "comic-panel-2.png"
-                },
-                {
-                    "id": "ch01_03_charming_mademoiselle",
-                    "description": "Gerald charming Mademoiselle to ask for permission to go out",
-                    "placement": "When Gerald enters Mademoiselle's room",
-                    "path": "/images/ch01_03_charming_mademoiselle.png",
-                    "originalFile": "comic-panel-mademoiselle.png"
-                },
-                {
-                    "id": "ch01_04_cave_discovery",
-                    "description": "Gerald discovering the cave entrance from the top of the wall",
-                    "placement": "When Gerald climbs the tree",
-                    "path": "/images/ch01_04_cave_discovery.png",
-                    "originalFile": "comic-panel-3.png"
-                },
-                {
-                    "id": "ch01_05_secret_passage",
-                    "description": "The children exploring the secret passage with a candle",
-                    "placement": "Inside the cave",
-                    "path": "/images/ch01_05_secret_passage.png",
-                    "originalFile": "comic-panel-secret-passage.png"
-                },
-                {
-                    "id": "ch01_06_castle_discovery",
-                    "description": "The children discovering the enchanted castle",
-                    "placement": "When they exit the passage",
-                    "path": "/images/ch01_06_castle_discovery.png",
-                    "originalFile": "comic-panel-castle-view.png"
-                },
-                {
-                    "id": "ch01_07_finding_ring",
-                    "description": "The children discovering the magic ring in the tower room",
-                    "placement": "In the tower room",
-                    "path": "/images/ch01_07_finding_ring.png",
-                    "originalFile": "comic-panel-ring.png"
-                }
-            ]
+          "id": "ch01_01_bandit_proposal",
+          "description": "Gerald proposes the bandit game to Jimmy and Kathleen in the school sitting room.",
+          "placement": "Early chapter",
+          "path": "/images/ch01_01_bandit_proposal.png",
+          "originalFile": "comic-panel-1.png",
+          "anchor": "More likely expel us,"
         },
         {
-            "chapterId": 2,
-            "title": "Chapter II",
-            "scenes": [
-                {
-                    "id": "ch02_01_princess_bower",
-                    "description": "The Princess in her bower telling the story to the children",
-                    "placement": "In the bower",
-                    "path": "/images/ch02_01_princess_bower.png",
-                    "originalFile": "comic-panel-princess-bower.png"
-                },
-                {
-                    "id": "ch02_02_ring_explanation",
-                    "description": "The Princess showing the magic ring to the children",
-                    "placement": "While explaining the ring power",
-                    "path": "/images/ch02_02_ring_explanation.png",
-                    "originalFile": "comic-panel-magic-ring-explanation.png"
-                },
-                {
-                    "id": "ch02_03_post_adventure_reflection",
-                    "description": "The children walking back through the wood, thinking about the adventure",
-                    "placement": "Walking back",
-                    "path": "/images/ch02_03_post_adventure_reflection.png",
-                    "originalFile": "comic-panel-garden-return.png"
-                }
-            ]
+          "id": "ch01_02_jimmy_sarcasm",
+          "description": "Jimmy delivers his sarcastic objection about caves and Mademoiselle.",
+          "placement": "Early chapter",
+          "path": "/images/ch01_02_jimmy_sarcasm.png",
+          "originalFile": "comic-panel-2.png",
+          "anchor": "There aren't any caves,"
+        },
+        {
+          "id": "ch01_03_charming_mademoiselle",
+          "description": "Gerald politely asks Mademoiselle for permission to go out.",
+          "placement": "Early chapter",
+          "path": "/images/ch01_03_charming_mademoiselle.png",
+          "originalFile": "comic-panel-mademoiselle.png",
+          "anchor": "You are a very polite little boy,"
+        },
+        {
+          "id": "ch01_04_cave_discovery",
+          "description": "Gerald climbs the bank and discovers the cave entrance in the hedgerow.",
+          "placement": "Mid chapter",
+          "path": "/images/ch01_04_cave_discovery.png",
+          "originalFile": "comic-panel-3.png",
+          "anchor": "It _is_ a cave!"
+        },
+        {
+          "id": "ch01_05_secret_passage",
+          "description": "The children descend into the stone passageway beneath the cave.",
+          "placement": "Mid chapter",
+          "path": "/images/ch01_05_secret_passage.png",
+          "originalFile": "comic-panel-secret-passage.png",
+          "anchor": "A vaulted stone"
+        },
+        {
+          "id": "ch01_06_castle_discovery",
+          "description": "The children emerge into the garden and see the enchanted castle.",
+          "placement": "Late chapter",
+          "path": "/images/ch01_06_castle_discovery.png",
+          "originalFile": "comic-panel-castle-view.png",
+          "anchor": "scene so like a picture out of a"
+        },
+        {
+          "id": "ch01_07_sleeping_princess",
+          "description": "The children find the sleeping Princess in the maze and wake her.",
+          "placement": "Late chapter",
+          "path": "/images/ch01_07_sleeping_princess.png",
+          "originalFile": "",
+          "anchor": "ended in a small brown hand with jewelled rings"
         }
-    ]
+      ]
+    },
+    {
+      "chapterId": 2,
+      "title": "Chapter II",
+      "scenes": [
+        {
+          "id": "ch02_01_procession_to_castle",
+          "description": "The Princess leads the children in procession across the formal gardens to the castle.",
+          "placement": "Early chapter",
+          "path": "/images/ch02_01_procession_to_castle.png",
+          "originalFile": "",
+          "anchor": "slow procession along the grass towards"
+        },
+        {
+          "id": "ch02_02_bread_and_cheese_feast",
+          "description": "The Princess serves bread and cheese while the children pretend it is a magical feast.",
+          "placement": "Mid chapter",
+          "path": "/images/ch02_02_bread_and_cheese_feast.png",
+          "originalFile": "",
+          "anchor": "The heavy tray held a loaf of bread, a lump of cheese"
+        },
+        {
+          "id": "ch02_03_magic_ring_reveal",
+          "description": "The Princess shows the magic ring and explains the wishes it grants.",
+          "placement": "Late chapter",
+          "path": "/images/ch02_03_magic_ring_reveal.png",
+          "originalFile": "",
+          "anchor": "\"And this ring?\" Jimmy pointed."
+        }
+      ]
+    },
+    {
+      "chapterId": 3,
+      "title": "Chapter III",
+      "scenes": [
+        {
+          "id": "ch03_01_temple_of_flora",
+          "description": "The children sit in the Temple of Flora and hear an unseen voice between the pillars.",
+          "placement": "Early chapter",
+          "path": "/images/ch03_01_temple_of_flora.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch03_02_floating_pencil",
+          "description": "A pencil writes by itself as invisible Mabel composes a letter.",
+          "placement": "Mid chapter",
+          "path": "/images/ch03_02_floating_pencil.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch03_03_invisible_tea",
+          "description": "Bread, butter, and apple float in midair as the invisible girl eats.",
+          "placement": "Late chapter",
+          "path": "/images/ch03_03_invisible_tea.png",
+          "originalFile": ""
+        }
+      ]
+    },
+    {
+      "chapterId": 4,
+      "title": "Chapter IV",
+      "scenes": [
+        {
+          "id": "ch04_01_statues_awaken",
+          "description": "Moonlit statues step down and the stone lizard stirs in the garden.",
+          "placement": "Early chapter",
+          "path": "/images/ch04_01_statues_awaken.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch04_02_burglars_strongroom",
+          "description": "Burglars pack silver into sacks by lantern light in the strong room.",
+          "placement": "Mid chapter",
+          "path": "/images/ch04_02_burglars_strongroom.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch04_03_stone_note_window",
+          "description": "A stone with a tied note crashes onto the supper table as Mabel and her aunt startle.",
+          "placement": "Late chapter",
+          "path": "/images/ch04_03_stone_note_window.png",
+          "originalFile": ""
+        }
+      ]
+    },
+    {
+      "chapterId": 5,
+      "title": "Chapter V",
+      "scenes": [
+        {
+          "id": "ch05_01_churchyard_wall",
+          "description": "The children sit on the churchyard wall as Gerald tells the adventure.",
+          "placement": "Early chapter",
+          "path": "/images/ch05_01_churchyard_wall.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch05_02_policeman_johnson",
+          "description": "Policeman Johnson washes at his bench while the children explain the burglars.",
+          "placement": "Mid chapter",
+          "path": "/images/ch05_02_policeman_johnson.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch05_03_burglars_river",
+          "description": "Burglars carry silver sacks to a boat by the river at night.",
+          "placement": "Late chapter",
+          "path": "/images/ch05_03_burglars_river.png",
+          "originalFile": ""
+        }
+      ]
+    },
+    {
+      "chapterId": 6,
+      "title": "Chapter VI",
+      "scenes": [
+        {
+          "id": "ch06_01_market_carnations",
+          "description": "The market square bustles as the children choose bright carnations with Mabel.",
+          "placement": "Early chapter",
+          "path": "/images/ch06_01_market_carnations.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch06_02_mademoiselle_flowers",
+          "description": "Gerald presents flowers to Mademoiselle in the drawing room.",
+          "placement": "Mid chapter",
+          "path": "/images/ch06_02_mademoiselle_flowers.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch06_03_mannikin_theatre",
+          "description": "The dining room turns into a tiny theatre with mannikins as the audience.",
+          "placement": "Late chapter",
+          "path": "/images/ch06_03_mannikin_theatre.png",
+          "originalFile": ""
+        }
+      ]
+    },
+    {
+      "chapterId": 7,
+      "title": "Chapter VII",
+      "scenes": [
+        {
+          "id": "ch07_01_ugly_wugly_arrives",
+          "description": "An Ugly-Wugly mannikin comes to life and asks for a hotel.",
+          "placement": "Early chapter",
+          "path": "/images/ch07_01_ugly_wugly_arrives.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch07_02_ugly_wuglies_lineup",
+          "description": "Gerald leads the Ugly-Wuglies into the yard and lines them up under the balcony.",
+          "placement": "Mid chapter",
+          "path": "/images/ch07_02_ugly_wuglies_lineup.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch07_03_mannikin_audience",
+          "description": "Kathleen, Jimmy, and Mabel huddle as the mannikin audience sits eerily still.",
+          "placement": "Late chapter",
+          "path": "/images/ch07_03_mannikin_audience.png",
+          "originalFile": ""
+        }
+      ]
+    },
+    {
+      "chapterId": 8,
+      "title": "Chapter VIII",
+      "scenes": [
+        {
+          "id": "ch08_01_bailiff_injured",
+          "description": "The bailiff lies unconscious in the Temple of Flora while the children help.",
+          "placement": "Early chapter",
+          "path": "/images/ch08_01_bailiff_injured.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch08_02_respectable_ugly_wugly",
+          "description": "A man appears in place of the Ugly-Wugly, speaking calmly beside the injured bailiff.",
+          "placement": "Mid chapter",
+          "path": "/images/ch08_02_respectable_ugly_wugly.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch08_03_ugly_wuglies_collapse",
+          "description": "Jimmy shakes the lifeless Ugly-Wuglies into a heap of coats and paper faces.",
+          "placement": "Late chapter",
+          "path": "/images/ch08_03_ugly_wuglies_collapse.png",
+          "originalFile": ""
+        }
+      ]
+    },
+    {
+      "chapterId": 9,
+      "title": "Chapter IX",
+      "scenes": [
+        {
+          "id": "ch09_01_mabel_giant",
+          "description": "Mabel grows to a towering height in the octagonal treasure room.",
+          "placement": "Early chapter",
+          "path": "/images/ch09_01_mabel_giant.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch09_02_yew_tunnel",
+          "description": "The giant Mabel crawls through the yew hedge tunnel as the children guide her.",
+          "placement": "Mid chapter",
+          "path": "/images/ch09_02_yew_tunnel.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch09_03_rhododendron_picnic",
+          "description": "The children picnic in rhododendrons while giant Mabel reaches for food.",
+          "placement": "Late chapter",
+          "path": "/images/ch09_03_rhododendron_picnic.png",
+          "originalFile": ""
+        }
+      ]
+    },
+    {
+      "chapterId": 10,
+      "title": "Chapter X",
+      "scenes": [
+        {
+          "id": "ch10_01_phoebus_arrives",
+          "description": "Phoebus the marble youth rises from the lake under moonlight beside Kathleen.",
+          "placement": "Early chapter",
+          "path": "/images/ch10_01_phoebus_arrives.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch10_02_statues_dive",
+          "description": "Phoebus leads Kathleen and Mabel as they run and dive into the moonlit lake.",
+          "placement": "Mid chapter",
+          "path": "/images/ch10_02_statues_dive.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch10_03_moon_feast",
+          "description": "Statues gather around the radiant pool with seven moon reflections for a celestial feast.",
+          "placement": "Late chapter",
+          "path": "/images/ch10_03_moon_feast.png",
+          "originalFile": ""
+        }
+      ]
+    },
+    {
+      "chapterId": 11,
+      "title": "Chapter XI",
+      "scenes": [
+        {
+          "id": "ch11_01_show_day",
+          "description": "Show-day crowds, wagons, and motor-cars fill the road to the castle gates.",
+          "placement": "Early chapter",
+          "path": "/images/ch11_01_show_day.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch11_02_picnic_tea",
+          "description": "The bailiff hosts a woodland picnic tea with a kettle and baskets.",
+          "placement": "Mid chapter",
+          "path": "/images/ch11_02_picnic_tea.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch11_03_stream_feet",
+          "description": "The children cool their feet in a running stream after the hot walk.",
+          "placement": "Late chapter",
+          "path": "/images/ch11_03_stream_feet.png",
+          "originalFile": ""
+        }
+      ]
+    },
+    {
+      "chapterId": 12,
+      "title": "Chapter XII",
+      "scenes": [
+        {
+          "id": "ch12_01_jewel_room_reveal",
+          "description": "The secret jewel room opens and Mabel, Lord Yalding, and Mademoiselle stare in awe.",
+          "placement": "Early chapter",
+          "path": "/images/ch12_01_jewel_room_reveal.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch12_02_ring_soapy_bowl",
+          "description": "Lord Yalding tries to remove the ring in a bowl of soapy water.",
+          "placement": "Mid chapter",
+          "path": "/images/ch12_02_ring_soapy_bowl.png",
+          "originalFile": ""
+        },
+        {
+          "id": "ch12_03_mademoiselle_weeps",
+          "description": "Mademoiselle weeps into arum lilies as Gerald comforts her.",
+          "placement": "Late chapter",
+          "path": "/images/ch12_03_mademoiselle_weeps.png",
+          "originalFile": ""
+        }
+      ]
+    }
+  ]
 }

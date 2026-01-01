@@ -9,7 +9,10 @@
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "book:extract": "tsx scripts/extract-gutenberg.ts",
+    "book:content": "tsx scripts/update-book-content.ts",
+    "book:build": "tsx scripts/build-book-json.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

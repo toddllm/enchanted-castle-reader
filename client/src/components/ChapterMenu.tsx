@@ -17,6 +17,7 @@ type BookmarkItem = {
 interface ChapterMenuProps {
   isOpen: boolean;
   onClose: () => void;
+  onTitlePage: () => void;
   chapters: Chapter[];
   currentChapterId: number;
   currentPageId: number;
@@ -29,6 +30,7 @@ interface ChapterMenuProps {
 export function ChapterMenu({ 
   isOpen, 
   onClose, 
+  onTitlePage,
   chapters, 
   currentChapterId, 
   currentPageId,
@@ -184,6 +186,18 @@ export function ChapterMenu({
             </div>
             
             <div className="p-6 border-t border-border bg-muted/30 text-center">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  onTitlePage();
+                  onClose();
+                }}
+                className="w-full mb-4 font-serif text-sm"
+                data-testid="title-page"
+              >
+                Return to Title Page
+              </Button>
               <p className="text-xs text-muted-foreground font-serif italic">
                 The Enchanted Castle by E. Nesbit
               </p>

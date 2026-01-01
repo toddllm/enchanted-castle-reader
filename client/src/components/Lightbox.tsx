@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -11,6 +11,19 @@ interface LightboxProps {
 }
 
 export function Lightbox({ isOpen, onClose, imageSrc, alt }: LightboxProps) {
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        onClose();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -34,7 +47,7 @@ export function Lightbox({ isOpen, onClose, imageSrc, alt }: LightboxProps) {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute -top-12 right-0 text-white hover:bg-white/20 rounded-full"
+              className="absolute top-4 right-4 text-white hover:bg-white/20 rounded-full z-10"
               onClick={onClose}
               aria-label="Close lightbox"
               data-testid="lightbox-close"
