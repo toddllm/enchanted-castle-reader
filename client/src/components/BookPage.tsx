@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Lightbox } from '@/components/Lightbox';
 import { ZoomIn } from 'lucide-react';
 import { BookPage as BookPageType } from '@/lib/book-parser';
+import { withBasePath } from '@/lib/assets';
 
 interface BookPageProps {
   page: BookPageType;
@@ -14,6 +15,7 @@ interface BookPageProps {
 
 export function BookPage({ page, isActive, pageNumber, totalPages }: BookPageProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const resolvedImageSrc = page.imageSrc ? withBasePath(page.imageSrc) : "";
 
   if (!isActive) return null;
 
@@ -49,7 +51,7 @@ export function BookPage({ page, isActive, pageNumber, totalPages }: BookPagePro
                     onClick={() => setIsLightboxOpen(true)}
                   >
                     <img 
-                      src={page.imageSrc} 
+                      src={resolvedImageSrc} 
                       alt={page.caption || "Comic panel"} 
                       className="w-full h-auto max-h-[60vh] object-contain rounded-sm"
                     />
@@ -83,7 +85,7 @@ export function BookPage({ page, isActive, pageNumber, totalPages }: BookPagePro
 
           {/* Page Footer Decoration */}
           <div className="pt-8 flex justify-center opacity-40">
-            <img src="/images/chapter-decor.png" alt="Decoration" className="h-12 w-auto mix-blend-multiply" />
+            <img src={withBasePath("/images/chapter-decor.png")} alt="Decoration" className="h-12 w-auto mix-blend-multiply" />
           </div>
         </div>
       </motion.div>
@@ -92,7 +94,7 @@ export function BookPage({ page, isActive, pageNumber, totalPages }: BookPagePro
         <Lightbox 
           isOpen={isLightboxOpen} 
           onClose={() => setIsLightboxOpen(false)} 
-          imageSrc={page.imageSrc} 
+          imageSrc={resolvedImageSrc} 
           alt={page.caption || "Comic panel"} 
         />
       )}

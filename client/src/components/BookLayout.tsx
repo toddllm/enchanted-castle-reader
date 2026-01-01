@@ -1,4 +1,5 @@
 import React from 'react';
+import { withBasePath } from '@/lib/assets';
 import { cn } from '@/lib/utils';
 
 interface BookLayoutProps {
@@ -7,10 +8,15 @@ interface BookLayoutProps {
 }
 
 export function BookLayout({ children, className }: BookLayoutProps) {
+  const paperTexture = withBasePath("/images/paper-texture.png");
+
   return (
     <div className={cn("min-h-screen w-full bg-background relative overflow-hidden", className)}>
       {/* Background Texture Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-0 opacity-40 mix-blend-multiply bg-[url('/images/paper-texture.png')] bg-repeat" />
+      <div
+        className="fixed inset-0 pointer-events-none z-0 opacity-40 mix-blend-multiply bg-repeat"
+        style={{ backgroundImage: `url(${paperTexture})` }}
+      />
       
       {/* Vine Borders - SVG Decoration */}
       <div className="fixed top-0 left-0 w-full h-16 z-10 pointer-events-none opacity-80">

@@ -5,6 +5,7 @@ import { ComicPage } from '@/components/ComicPage';
 import { BookControls } from '@/components/BookControls';
 import { ChapterMenu } from '@/components/ChapterMenu';
 import { Menu } from 'lucide-react';
+import { withBasePath } from '@/lib/assets';
 import { rawBookContent } from '@/lib/book-content';
 import { parseBookContent, Chapter, BookPage as BookPageType } from '@/lib/book-parser';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -349,7 +350,7 @@ export default function Home() {
           >
             <div className="relative w-full max-w-md aspect-[2/3] shadow-2xl mb-8 rounded-lg overflow-hidden group cursor-pointer" onClick={handleStartReading}>
               <img 
-                src="/images/book-cover.png" 
+                src={withBasePath("/images/book-cover.png")}
                 alt="The Enchanted Castle" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -391,7 +392,7 @@ export default function Home() {
           <div key="reader" className="relative" data-testid="reader-view">
             {/* Hero Background for Reader Mode */}
             <div className="fixed top-0 left-0 w-full h-64 z-0 opacity-20 pointer-events-none mask-image-gradient">
-              <img src="/images/hero-bg.png" alt="Background" className="w-full h-full object-cover" />
+              <img src={withBasePath("/images/hero-bg.png")} alt="Background" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
             </div>
 

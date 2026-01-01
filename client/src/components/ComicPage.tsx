@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Lightbox } from '@/components/Lightbox';
 import { ImageOff, ZoomIn } from 'lucide-react';
+import { withBasePath } from '@/lib/assets';
 
 interface ComicPageProps {
   imageSrc: string;
@@ -14,6 +15,7 @@ interface ComicPageProps {
 export function ComicPage({ imageSrc, caption, dialogue, isActive }: ComicPageProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [hasError, setHasError] = useState(!imageSrc);
+  const resolvedImageSrc = imageSrc ? withBasePath(imageSrc) : "";
 
   useEffect(() => {
     setHasError(!imageSrc);
@@ -55,7 +57,7 @@ export function ComicPage({ imageSrc, caption, dialogue, isActive }: ComicPagePr
               </div>
             ) : (
               <img 
-                src={imageSrc} 
+                src={resolvedImageSrc} 
                 alt={caption || "Comic Panel"} 
                 className="w-full h-full object-contain bg-stone-100"
                 onError={() => setHasError(true)}
@@ -93,7 +95,7 @@ export function ComicPage({ imageSrc, caption, dialogue, isActive }: ComicPagePr
       <Lightbox 
         isOpen={isLightboxOpen && !hasError} 
         onClose={() => setIsLightboxOpen(false)} 
-        imageSrc={imageSrc} 
+        imageSrc={resolvedImageSrc} 
         alt={caption || "Comic Panel"} 
       />
     </>
